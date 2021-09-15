@@ -9,5 +9,5 @@ public interface Page {
 	public void rankingPage();
 	// 아래는 게임시작버튼
 	public void ticTacToePage();
-	public void oneToFityPage();
+	public void oneToFiftyPage();
 }

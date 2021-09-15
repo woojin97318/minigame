@@ -1,4 +1,4 @@
-package game.onetofity;
+package game.onetofifty;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
-public class OneToFityController implements Initializable{
+public class OneToFiftyController implements Initializable{
 	Parent root;
 	
 	public void setRoot(Parent root) {

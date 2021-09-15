@@ -29,7 +29,7 @@ public class MenuController implements Initializable{
 	public void oneToFity() {
 		// 1to50 게임시작
 		page.setRoot(root);
-		page.oneToFityPage();
+		page.oneToFiftyPage();
 	}
 
 }

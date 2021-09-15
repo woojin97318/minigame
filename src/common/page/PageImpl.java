@@ -1,6 +1,6 @@
 package common.page;
 
-import game.onetofity.OneToFityController;
+import game.onetofifty.OneToFiftyController;
 import game.tictactoe.TicTacToeController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -82,14 +82,14 @@ public class PageImpl implements Page{
 	}
 
 	@Override
-	public void oneToFityPage() {
+	public void oneToFiftyPage() {
 		try {
 			FXMLLoader loader =
-					new FXMLLoader(getClass().getResource("../../game/onetofity/oneToFityView.fxml"));
+					new FXMLLoader(getClass().getResource("../../game/onetofifty/oneToFiftyView.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 
-			OneToFityController ctl = loader.getController();
+			OneToFiftyController ctl = loader.getController();
 			ctl.setRoot(root);
 			
 			Stage stage = (Stage)this.root.getScene().getWindow();
