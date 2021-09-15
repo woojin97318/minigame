@@ -10,4 +10,6 @@ public interface Page {
 	// 아래는 게임시작버튼
 	public void ticTacToePage();
 	public void oneToFiftyPage();
+	public void tictactoePvpPage();
+	public void tictactoePvcPage();
 }
