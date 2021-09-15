@@ -2,6 +2,8 @@ package common.page;
 
 import game.onetofifty.OneToFiftyController;
 import game.tictactoe.TicTacToeController;
+import game.tictactoe.TictactoeStartController;
+import game.tictactoe.tictactoePvpStart;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -90,6 +92,43 @@ public class PageImpl implements Page{
 			Scene scene = new Scene(root);
 
 			OneToFiftyController ctl = loader.getController();
+			ctl.setRoot(root);
+			
+			Stage stage = (Stage)this.root.getScene().getWindow();
+
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void tictactoePvpPage() {
+		try {
+			FXMLLoader loader =
+					new FXMLLoader(getClass().getResource("../../game/tictactoe/tictactoePvpStart.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			tictactoePvpStart ctl = loader.getController();
+			ctl.setRoot(root);
+			
+			Stage stage = (Stage)this.root.getScene().getWindow();
+
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void tictactoePvcPage() {
+		try {
+			FXMLLoader loader =
+					new FXMLLoader(getClass().getResource("../../game/tictactoe/tictactoeStart.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			TictactoeStartController ctl = loader.getController();
 			ctl.setRoot(root);
 			
 			Stage stage = (Stage)this.root.getScene().getWindow();

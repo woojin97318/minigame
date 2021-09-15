@@ -16,11 +16,13 @@ public class TicTacToeController implements Initializable{
 	}
 
 	public void pvpProc() {
-
+		pg.setRoot(root);
+		pg.tictactoePvpPage();
 	}
 
 	public void pvcProc() {
-
+		pg.setRoot(root);
+		pg.tictactoePvcPage();
 	}
 
 	public void goMainProc() {
