@@ -1,4 +1,4 @@
-package mainMenu;
+package menu;
 
 import java.net.URL;
 import java.util.ResourceBundle;

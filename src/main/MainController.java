@@ -3,11 +3,14 @@ package main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import common.page.Page;
+import common.page.PageImpl;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
 public class MainController implements Initializable{
 	Parent root;
+	Page page;
 	
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -15,14 +18,12 @@ public class MainController implements Initializable{
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		page = new PageImpl();
 	}
 	
-	public void nickChkBtn() {
-		// 닉네임 중복체크 버튼 메소드
-	}
 	public void gameStartBtn() {
-		// 게임시작 버튼 메소드
+		page.setRoot(root);
+		page.menuPage();
 	}
 
 }
