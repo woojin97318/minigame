@@ -8,30 +8,30 @@ import common.page.PageImpl;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
-public class TicTacToeController implements Initializable{
+public class tictactoePvpStart implements Initializable{
+
 	Parent root;
 	Page pg;
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-
-	public void pvpProc() {
-
+	
+	public void pauseStartProc() {
+		
 	}
-
-	public void pvcProc() {
-
+	
+	public void abstentionProc() {
+		
 	}
-
+	
 	public void goMainProc() {
 		pg.setRoot(root);
 		pg.menuPage();
 	}
-
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		pg = new PageImpl();
-
 	}
 
 }
