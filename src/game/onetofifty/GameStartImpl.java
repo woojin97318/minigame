@@ -13,6 +13,7 @@ public class GameStartImpl implements GameStart {
 	int[] num = new int[50];		// 1~50까지의 수가 들어가는 배열
 	Button gameStartBtn;			// 게임 시작 버튼
 	Label nextNumLb;				// 다음에 선택해야할 숫자 표시라벨
+	Label timerLb;					// 타이머 라벨
 	int step = 1;					// 게임 진행 시 선택해야할 숫자
 	int i = 25;						// 1~25 숫자버튼 클릭 시 다음 26~50숫자를 가져오기 위한 변수
 
@@ -23,16 +24,25 @@ public class GameStartImpl implements GameStart {
 
 	@Override
 	public void gameStart() {	// 게임 시작 버튼 클릭 메소드
+		GameTimer timer = new GameTimer();
+		timer.setRoot(root);
+		ThreadSharedData tsd = new ThreadSharedData();
+		timer.tsd = tsd;
+		timer.start(); //타이머 스레드 동작
+		timerLb = (Label)root.lookup("#timerLb");
+
+		System.out.println(tsd.getTime());
+
 		gameStartBtn = (Button)root.lookup("#gameStartBtn");
 		nextNumLb = (Label)root.lookup("#nextNumLb");
 		if(gameStartBtn.getText().equals("다시 시작"))	// 게임을 재시작시 step를 1로 초기화
 			step = 1;
 		else	// 첫 게임 시작시 시작버튼 클릭시 "다시 시작으로 setText"
 			gameStartBtn.setText("다시 시작");
-		
+
 		for (int i = 0; i < 50; i++)
 			num[i] = i + 1;	// 1~50 숫자 num배열에 초기화
-		
+
 		shakeNumber();	// num 배열의 숫자를 섞음
 
 		for (int i = 0; i < 25; i++) {        // 1 ~ 25 버튼에
@@ -40,6 +50,9 @@ public class GameStartImpl implements GameStart {
 			btn[i].setText(Integer.toString(num[i])); // num[0~24] 숫자를 입력
 		}
 		nextNumLb.setText(Integer.toString(step));	// 다음 눌러야할 숫자를 Label에 표시
+
+		timerLb.setText(tsd.getTime());
+		timer.timeSleep(1000);
 	}
 	public void shakeNumber() {	// 1 ~ 50 숫자를 뒤섞는 메소드
 		Random r = new Random();
@@ -71,7 +84,7 @@ public class GameStartImpl implements GameStart {
 			step++;
 			nextNumLb.setText(Integer.toString(step));
 			if(step == 51) {	// 게임종료 및 타이머 종료
-				
+
 			}
 		}
 	}
