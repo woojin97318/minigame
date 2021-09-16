@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import common.page.Page;
 import common.page.PageImpl;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
@@ -31,9 +32,8 @@ public class OneToFiftyController implements Initializable{
 		page.setRoot(root);
 		page.menuPage();
 	}
-	public void onClick() {
-		gs.setRoot(root);
-		gs.onClick();
+	public void onClick(ActionEvent event) {
+		gs.onClick(event);
 	}
 
 }
