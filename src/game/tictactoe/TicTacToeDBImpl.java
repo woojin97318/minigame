@@ -37,8 +37,6 @@ public class TicTacToeDBImpl implements TicTacToeDB{
 		alert.alertInfo("입력하신 이름을 앞으로 사용하실 수 있습니다");
 	}
 	
-	
-	
 	public TicTacToeDTO sameChk(TicTacToeDTO dto) {
 		TextField playerName1 = (TextField)root.lookup("playerName1");
 		
@@ -47,7 +45,7 @@ public class TicTacToeDBImpl implements TicTacToeDB{
 			PreparedStatement ps = db.conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-				dto.setName((String)rs.next());
+				//dto.setName((String)rs.next());
 				
 			}
 			

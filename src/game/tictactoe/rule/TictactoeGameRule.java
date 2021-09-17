@@ -111,10 +111,14 @@ public class TictactoeGameRule {
 		if(isWon() == true) {
 			lblStatus.setText(winner+"가 승리했습니다");
 			gameFinished();
+			//이긴플레이어 DB -> winCnt++ -> 다시하기?
+			//진플레이어 DB -> loseCnt++ 
 		}
 		else if(isFull() ==true) {
 			lblStatus.setText("무승부입니다");
 			gameFinished();
+			//두플레이어 DB -> drawCnt++ -> 다시하기
+			
 		}
 	}
 
@@ -166,7 +170,15 @@ public class TictactoeGameRule {
 		}		
 		return false;
 	}
-
+	
+	
+	/*
+	 *  DB 접근 -> tictactoeRank -> select * table Win카운트에 대해 내림차순
+	 *  -> 뷰로 보여 주는 메소드.
+	public void rankTable() {
+		
+	}
+*/
 
 	//무승부 미완성
 	public boolean isFull() {
