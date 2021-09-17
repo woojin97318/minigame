@@ -6,8 +6,11 @@ public interface Page {
 	public void setRoot(Parent root);
 	public void mainPage();
 	public void menuPage();
-	public void rankingPage();
+	public void rankingPage1to50();
 	// 아래는 게임시작버튼
 	public void ticTacToePage();
 	public void oneToFiftyPage();
+	public void tictactoePvpPage();
+	public void tictactoePvcPage();
+	public void rankingInsert(String clearTime);
 }
