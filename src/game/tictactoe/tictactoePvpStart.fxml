@@ -33,6 +33,6 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="playerChk" layoutX="22.0" layoutY="142.0" mnemonicParsing="false" onAction="#playerCommit" prefHeight="22.0" prefWidth="191.0" text="확인" />
+      <Button fx:id="playerChk" layoutX="22.0" layoutY="142.0" mnemonicParsing="false" onAction="#playerCommit" prefHeight="22.0" prefWidth="183.0" text="확인" />
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package game.tictactoe.rule;
 
+import common.DBClass;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,7 +9,7 @@ import javafx.scene.control.TextField;
 public class TictactoeGameRule {
 	Parent root;
 
-
+	DBClass db;
 
 	Button[] gameBtn = new Button[10];
 	Button playerChk;
@@ -17,6 +18,11 @@ public class TictactoeGameRule {
 	int turnCnt = 0;//턴 수 
 	String whoTurn = null;//현재 턴의 입력  (추후 이미지로 변환예정 - 디자인시 시작)
 	String p1, p2, winner = null;
+
+	public void setRoot(Parent root) {	
+		this.root = root;		
+	}
+	
 	public void setPTurn(String s) {
 		this.pTurn = s;
 	}
@@ -67,11 +73,6 @@ public class TictactoeGameRule {
 			gameBtn[i].setDisable(true);
 		}
 		playerChk.setDisable(false);
-	}
-
-
-	public void setRoot(Parent root) {	
-		this.root = root;		
 	}
 
 	public void gameStart() {
