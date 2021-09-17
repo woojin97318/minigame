@@ -26,9 +26,6 @@ public class tictactoePvpStart implements Initializable{
 		gRule.gameStart();
 	}
 	
-	public void pauseStartProc() {
-		
-	}
 	
 	public void abstentionProc() {
 		

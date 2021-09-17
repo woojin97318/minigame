@@ -13,6 +13,7 @@ public class TictactoeGameRule {
 	int turnCnt = 0;//턴 수 
 	String whoTurn = null;//현재 턴의 입력 
 
+	//턴계산 메소드
 	public void changeTurn() {
 		if(turnCnt %2 == 0) {
 			pTurn = "O";
@@ -23,7 +24,18 @@ public class TictactoeGameRule {
 			whoTurn = "O";
 			turnCnt++;
 		}
-
+	}
+	
+	public void gameFinished() {
+		gameBtn[1].setDisable(true);
+		gameBtn[2].setDisable(true);
+		gameBtn[3].setDisable(true);
+		gameBtn[4].setDisable(true);
+		gameBtn[5].setDisable(true);
+		gameBtn[6].setDisable(true);
+		gameBtn[7].setDisable(true);
+		gameBtn[8].setDisable(true);
+		gameBtn[9].setDisable(true);
 	}
 
 
@@ -40,81 +52,68 @@ public class TictactoeGameRule {
 		for(int i = 1; i <= 9; i++) {
 			gameBtn[i] = (Button)root.lookup("#gameBtn" + i);
 			System.out.println(i);
-			gameBtn[i].setText(" ");			
+			gameBtn[i].setText(" ");	
+			gameBtn[i].setDisable(false);
 		}
+
 	}
 	public void btnProc(Button btn) {
 		changeTurn();
 		btn.setText(whoTurn);
 		Label lblStatus = (Label)root.lookup("#lblStatus");
+		System.out.println("");
 		lblStatus.setText(pTurn+"의 차례입니다.");
 		if(isWon() == true) {
 			lblStatus.setText(whoTurn+"이 승리했습니다");
-			/*	for(int j = 1; j <= 9; j++) {
-				gameBtn[j] = (Button)root.lookup("#gameBtn" + j);
-				System.out.println(j);
-				gameBtn[j].setDisable(true);
-			}*/
+			gameFinished();
 		}
-		/*if(isFull() == true) {
-			lblStatus.setText("무승부입니다.");
-				for(int k = 1; k <= 9; k++) {
-				gameBtn[k] = (Button)root.lookup("#gameBtn" + k);
-				System.out.println(k);
-				gameBtn[k].setDisable(true);
-			}
+		/*else if(isFull() ==true) {
+			lblStatus.setText("무승부입니다");
+			gameFinished();
 		}*/
-
 	}
 
 	//승리조건
 	public boolean isWon() {
 		//가로줄 조건
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[1].getText() == whoTurn
 			&&gameBtn[2].getText() == whoTurn
 			&&gameBtn[3].getText() == whoTurn) {
 				return true;
 			}
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[4].getText() == whoTurn
 			&&gameBtn[5].getText() == whoTurn
 			&&gameBtn[6].getText() == whoTurn) {
 				return true;
 			}
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[7].getText() == whoTurn
 			&&gameBtn[8].getText() == whoTurn
 			&&gameBtn[9].getText() == whoTurn) {
 				return true;
 			}
 		//세로줄조건
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[1].getText() == whoTurn
 			&&gameBtn[4].getText() == whoTurn
 			&&gameBtn[7].getText() == whoTurn) {
 				return true;
 			}
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[2].getText() == whoTurn
 			&&gameBtn[5].getText() == whoTurn
 			&&gameBtn[8].getText() == whoTurn) {
 				return true;
 			}
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[3].getText() == whoTurn
 			&&gameBtn[6].getText() == whoTurn
 			&&gameBtn[9].getText() == whoTurn) {
 				return true;
 			}
 		//대각선 조건
-		for(int i = 0; i<=9; i++)
 			if(gameBtn[1].getText() == whoTurn
 			&&gameBtn[5].getText() == whoTurn
 			&&gameBtn[9].getText() == whoTurn) {
 				return true;
 			}
-		for(int i = 0; i<=9; i++)
+		
 			if(gameBtn[3].getText() == whoTurn
 			&&gameBtn[5].getText() == whoTurn
 			&&gameBtn[7].getText() == whoTurn) {
@@ -123,23 +122,12 @@ public class TictactoeGameRule {
 		return false;
 	}
 
-	
+
 	//무승부 미완성
 	public boolean isFull() {
 		Label lblStatus = (Label)root.lookup("#lblStatus");
-		for(int i = 0; i <=9; i++) {
-			if(gameBtn[1].getText()!=null &&
-					gameBtn[2].getText()!=null &&
-					gameBtn[3].getText()!=null &&
-					gameBtn[4].getText()!=null &&
-					gameBtn[5].getText()!=null &&
-					gameBtn[6].getText()!=null &&
-					gameBtn[7].getText()!=null &&
-					gameBtn[8].getText()!=null &&
-					gameBtn[9].getText()!=null
-					) {
-				return true;
-			}
+		if(turnCnt == 9 && isWon() ==false) {
+			return true;
 		}
 		return false;
 	}
