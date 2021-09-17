@@ -1,6 +1,9 @@
 package game.tictactoe.rule;
 
+import common.AlertClass;
 import common.DBClass;
+import game.tictactoe.TicTacToeDB;
+import game.tictactoe.TicTacToeDBImpl;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,7 +13,9 @@ public class TictactoeGameRule {
 	Parent root;
 
 	DBClass db;
-
+	TicTacToeDB tdb = new TicTacToeDBImpl();
+	AlertClass alert = new AlertClass();
+	
 	Button[] gameBtn = new Button[10];
 	Button playerChk;
 	Button gameStartBtn;
@@ -20,7 +25,7 @@ public class TictactoeGameRule {
 	String p1, p2, winner = null;
 
 	public void setRoot(Parent root) {	
-		this.root = root;		
+		this.root = root;	
 	}
 	
 	public void setPTurn(String s) {
@@ -34,10 +39,17 @@ public class TictactoeGameRule {
 		playerChk = (Button)root.lookup("#playerChk");
 		p1 = playerName1.getText();
 		p2 = playerName2.getText();
-
+		tdb.setRoot(root);
+		
 		if(p1.equals(p2)) {
+			
+			alert.alertInfo("두 플레이어의 이름을 동일하게 사용할 수 없습니다!");
 			System.out.println("두 플레이어의 이름이 같습니다");
 		}else {
+			
+			//tictactoe DB추가 예정
+			tdb.nameChk();
+			
 			System.out.println("p1 : "+ p1);
 			System.out.println("p2 : "+ p2);
 			setPTurn(p1);
