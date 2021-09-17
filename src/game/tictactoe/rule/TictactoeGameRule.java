@@ -3,39 +3,70 @@ package game.tictactoe.rule;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class TictactoeGameRule {
 	Parent root;
 
 
+
 	Button[] gameBtn = new Button[10];
+	Button playerChk;
+	Button gameStartBtn;
 	String pTurn = null; //다음사람의 턴
 	int turnCnt = 0;//턴 수 
-	String whoTurn = null;//현재 턴의 입력 
+	String whoTurn = null;//현재 턴의 입력  (추후 이미지로 변환예정 - 디자인시 시작)
+	String p1, p2, winner = null;
+	public void setPTurn(String s) {
+		this.pTurn = s;
+	}
+
+	//playerName 받아오기
+	public void getPlayerName() {
+		TextField playerName1 = (TextField)root.lookup("#playerName1");
+		TextField playerName2 = (TextField)root.lookup("#playerName2");
+		playerChk = (Button)root.lookup("#playerChk");
+		p1 = playerName1.getText();
+		p2 = playerName2.getText();
+
+		if(p1.equals(p2)) {
+			System.out.println("두 플레이어의 이름이 같습니다");
+		}else {
+			System.out.println("p1 : "+ p1);
+			System.out.println("p2 : "+ p2);
+			setPTurn(p1);
+			setPTurn(p2);
+			gameStartBtn = (Button)root.lookup("#gamestartBtn");
+			gameStartBtn.setDisable(false);
+			playerChk.setDisable(true);
+			
+		}
+
+	}
+
 
 	//턴계산 메소드
 	public void changeTurn() {
 		if(turnCnt %2 == 0) {
-			pTurn = "O";
+			pTurn = p1;
 			whoTurn = "X";
+			winner = p2;
 			turnCnt++;
 		}else {
-			pTurn = "X";
+			pTurn = p2;
 			whoTurn = "O";
+			winner = p1;
 			turnCnt++;
+
 		}
 	}
-	
+
 	public void gameFinished() {
-		gameBtn[1].setDisable(true);
-		gameBtn[2].setDisable(true);
-		gameBtn[3].setDisable(true);
-		gameBtn[4].setDisable(true);
-		gameBtn[5].setDisable(true);
-		gameBtn[6].setDisable(true);
-		gameBtn[7].setDisable(true);
-		gameBtn[8].setDisable(true);
-		gameBtn[9].setDisable(true);
+		for(int i = 1; i <= 9; i++) {
+			gameBtn[i] = (Button)root.lookup("#gameBtn" + i);
+			gameBtn[i].setDisable(true);
+		}
+		playerChk.setDisable(false);
 	}
 
 
@@ -44,6 +75,7 @@ public class TictactoeGameRule {
 	}
 
 	public void gameStart() {
+		gameStartBtn.setDisable(true);
 		Label lblStatus = (Label)root.lookup("#lblStatus");
 		turnCnt = 0;	
 		changeTurn();
@@ -62,9 +94,9 @@ public class TictactoeGameRule {
 		btn.setText(whoTurn);
 		Label lblStatus = (Label)root.lookup("#lblStatus");
 		System.out.println("");
-		lblStatus.setText(pTurn+"의 차례입니다.");
+		lblStatus.setText(pTurn+" 님의 차례입니다.");
 		if(isWon() == true) {
-			lblStatus.setText(whoTurn+"이 승리했습니다");
+			lblStatus.setText(winner+"가 승리했습니다");
 			gameFinished();
 		}
 		else if(isFull() ==true) {
@@ -76,49 +108,49 @@ public class TictactoeGameRule {
 	//승리조건
 	public boolean isWon() {
 		//가로줄 조건
-			if(gameBtn[1].getText() == whoTurn
-			&&gameBtn[2].getText() == whoTurn
-			&&gameBtn[3].getText() == whoTurn) {
-				return true;
-			}
-			if(gameBtn[4].getText() == whoTurn
-			&&gameBtn[5].getText() == whoTurn
-			&&gameBtn[6].getText() == whoTurn) {
-				return true;
-			}
-			if(gameBtn[7].getText() == whoTurn
-			&&gameBtn[8].getText() == whoTurn
-			&&gameBtn[9].getText() == whoTurn) {
-				return true;
-			}
+		if(gameBtn[1].getText() == whoTurn
+				&&gameBtn[2].getText() == whoTurn
+				&&gameBtn[3].getText() == whoTurn) {
+			return true;
+		}
+		if(gameBtn[4].getText() == whoTurn
+				&&gameBtn[5].getText() == whoTurn
+				&&gameBtn[6].getText() == whoTurn) {
+			return true;
+		}
+		if(gameBtn[7].getText() == whoTurn
+				&&gameBtn[8].getText() == whoTurn
+				&&gameBtn[9].getText() == whoTurn) {
+			return true;
+		}
 		//세로줄조건
-			if(gameBtn[1].getText() == whoTurn
-			&&gameBtn[4].getText() == whoTurn
-			&&gameBtn[7].getText() == whoTurn) {
-				return true;
-			}
-			if(gameBtn[2].getText() == whoTurn
-			&&gameBtn[5].getText() == whoTurn
-			&&gameBtn[8].getText() == whoTurn) {
-				return true;
-			}
-			if(gameBtn[3].getText() == whoTurn
-			&&gameBtn[6].getText() == whoTurn
-			&&gameBtn[9].getText() == whoTurn) {
-				return true;
-			}
+		if(gameBtn[1].getText() == whoTurn
+				&&gameBtn[4].getText() == whoTurn
+				&&gameBtn[7].getText() == whoTurn) {
+			return true;
+		}
+		if(gameBtn[2].getText() == whoTurn
+				&&gameBtn[5].getText() == whoTurn
+				&&gameBtn[8].getText() == whoTurn) {
+			return true;
+		}
+		if(gameBtn[3].getText() == whoTurn
+				&&gameBtn[6].getText() == whoTurn
+				&&gameBtn[9].getText() == whoTurn) {
+			return true;
+		}
 		//대각선 조건
-			if(gameBtn[1].getText() == whoTurn
-			&&gameBtn[5].getText() == whoTurn
-			&&gameBtn[9].getText() == whoTurn) {
-				return true;
-			}
-		
-			if(gameBtn[3].getText() == whoTurn
-			&&gameBtn[5].getText() == whoTurn
-			&&gameBtn[7].getText() == whoTurn) {
-				return true;
-			}		
+		if(gameBtn[1].getText() == whoTurn
+				&&gameBtn[5].getText() == whoTurn
+				&&gameBtn[9].getText() == whoTurn) {
+			return true;
+		}
+
+		if(gameBtn[3].getText() == whoTurn
+				&&gameBtn[5].getText() == whoTurn
+				&&gameBtn[7].getText() == whoTurn) {
+			return true;
+		}		
 		return false;
 	}
 

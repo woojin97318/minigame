@@ -21,6 +21,12 @@ public class tictactoePvpStart implements Initializable{
 		this.root = root;
 	}
 	
+	public void playerCommit() {
+		System.out.println("닉네임 입력 완료.");
+		gRule.setRoot(root);
+		gRule.getPlayerName();
+	}
+	
 	public void startProc() {
 		gRule.setRoot(root);
 		gRule.gameStart();
