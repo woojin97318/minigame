@@ -67,10 +67,10 @@ public class TictactoeGameRule {
 			lblStatus.setText(whoTurn+"이 승리했습니다");
 			gameFinished();
 		}
-		/*else if(isFull() ==true) {
+		else if(isFull() ==true) {
 			lblStatus.setText("무승부입니다");
 			gameFinished();
-		}*/
+		}
 	}
 
 	//승리조건
@@ -126,7 +126,7 @@ public class TictactoeGameRule {
 	//무승부 미완성
 	public boolean isFull() {
 		Label lblStatus = (Label)root.lookup("#lblStatus");
-		if(turnCnt == 9 && isWon() ==false) {
+		if(turnCnt == 10 && isWon() ==false) {
 			return true;
 		}
 		return false;
