@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-
 public class GameStartImpl implements GameStart {
 	Parent root;
 	Button[] btn = new Button[25];	// 25개의 버튼을 저장할 배열
@@ -20,9 +19,8 @@ public class GameStartImpl implements GameStart {
 	Label timerLb;					// 타이머 라벨
 	int step = 0;					// 게임 진행 시 선택해야할 숫자
 	int i = 25;						// 1~25 숫자버튼 클릭 시 다음 숫자인 26~50을 가져오기 위한 변수
-	Thread thread;					// 타이머 기능을 담을 변수
 	String clearTime;				// 클리어 시간을 담을 변수
-	
+	Thread thread;					// 타이머 기능을 담을 변수
 	Page page = new PageImpl();
 
 	@Override
@@ -31,7 +29,7 @@ public class GameStartImpl implements GameStart {
 	}
 
 	@Override
-	public void gameStart() {	// 게임 시작 버튼 클릭 메소드
+	public void gameStart() {	//게임 시작 버튼 클릭 메소드
 		gameStartBtn = (Button)root.lookup("#gameStartBtn");//게임 시작 버튼
 		nextNumLb = (Label)root.lookup("#nextNumLb");		//다음 숫자 표시 라벨
 		timerLb = (Label)root.lookup("#timerLb");			//타이머 라벨
@@ -58,30 +56,8 @@ public class GameStartImpl implements GameStart {
 
 		nextNumLb.setText(Integer.toString(step));	// 다음 눌러야할 숫자를 Label에 표시
 
-		timerThread();	//게임을 시작할 때 마다 스레드 객체를 새로 생성하여 시작
-		thread.start();
-	}
-
-	@Override
-	public void onClick(ActionEvent event) {	// 게임 진행 중 숫자버튼 클릭 메소드
-		if(step == Integer.parseInt(((Button)event.getSource()).getText())) {
-			if(step > 25) {
-				((Button)event.getSource()).setText("");
-			}else {
-				((Button)event.getSource()).setText(Integer.toString(num[i++]));
-			}
-			step++;
-			nextNumLb.setText(Integer.toString(step));
-
-			if(step == 51) {	// 게임종료 및 타이머 종료
-				nextNumLb.setText("게임 클리어");	//다음 숫자 텍스트 "게임 클리어"로 setText
-				thread.interrupt();				//타이머 작동 스탑
-				clearTime = timerLb.getText(); 	//클리어 시간 저장
-				
-				page.setRoot(root);				//게임 클리어시
-				page.rankingInsert(clearTime);	//랭킹 등록 페이지로 이동
-			}
-		}
+		timerThread();	//게임을 시작할 때 마다 스레드 객체를 새로 생성하여
+		thread.start();	//게임 시작
 	}
 
 	@Override
@@ -105,7 +81,28 @@ public class GameStartImpl implements GameStart {
 	}
 
 	@Override
-	// 타이머 기능 스레드
+	public void onClick(ActionEvent event) {	// 게임 진행 중 숫자버튼 클릭 메소드
+		if(step == Integer.parseInt(((Button)event.getSource()).getText())) {
+			if(step > 25) {
+				((Button)event.getSource()).setText("");
+			}else {
+				((Button)event.getSource()).setText(Integer.toString(num[i++]));
+			}
+			step++;
+			nextNumLb.setText(Integer.toString(step));
+
+			if(step == 51) {	// 게임종료 및 타이머 종료
+				nextNumLb.setText("게임 클리어");	//다음 숫자 텍스트 "게임 클리어"로 setText
+				thread.interrupt();				//타이머 작동 스탑
+				clearTime = timerLb.getText(); 	//클리어 시간 저장
+
+				page.setRoot(root);				//게임 클리어시
+				page.rankingInsert(clearTime);	//랭킹 등록 페이지로 이동
+			}
+		}
+	}
+
+	@Override
 	public void timerThread() {
 		thread = new Thread() {
 			@Override
@@ -131,5 +128,5 @@ public class GameStartImpl implements GameStart {
 			}
 		};
 	}
-	
+
 }

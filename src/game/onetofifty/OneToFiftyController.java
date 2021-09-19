@@ -11,8 +11,8 @@ import javafx.scene.Parent;
 
 public class OneToFiftyController implements Initializable{
 	Parent root;
-	GameStart gs;
 	Page page;
+	GameStart gs;
 	
 	public void setRoot(Parent root) {
 		this.root = root;
