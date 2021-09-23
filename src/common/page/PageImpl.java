@@ -42,7 +42,6 @@ public class PageImpl implements Page{
 	}
 	@Override
 	public void menuPage() {
-
 		try {
 			FXMLLoader loader =
 					new FXMLLoader(getClass().getResource("../../menu/menuView.fxml"));
