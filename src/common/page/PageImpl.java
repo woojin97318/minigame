@@ -35,7 +35,7 @@ public class PageImpl implements Page{
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 //			stage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-			stage.setTitle("Mini Game");
+			stage.setTitle("미니게임");
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
@@ -56,7 +56,7 @@ public class PageImpl implements Page{
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 //			stage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-			stage.setTitle("Menu");
+			stage.setTitle("메뉴");
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
@@ -142,7 +142,7 @@ public class PageImpl implements Page{
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 //			stage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-			stage.setTitle("Tic Tac Toe");
+			stage.setTitle("틱택토");
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
@@ -163,7 +163,7 @@ public class PageImpl implements Page{
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 //			stage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-			stage.setTitle("Tic Tac Toe");
+			stage.setTitle("틱택토");
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
@@ -184,7 +184,7 @@ public class PageImpl implements Page{
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 //			stage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-			stage.setTitle("Tic Tac Toe");
+			stage.setTitle("틱택토");
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {

@@ -22,7 +22,7 @@ public class MainClass extends Application {
 		ctl.setRoot(root);
 
 //		primaryStage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
-		primaryStage.setTitle("Mini Game");
+		primaryStage.setTitle("미니게임");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
