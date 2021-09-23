@@ -1,6 +1,8 @@
 package common.page;
 
+import game.onetofifty.MyClearTimeController;
 import game.onetofifty.OneToFiftyController;
+import game.onetofifty.RankingController;
 import game.tictactoe.TicTacToeController;
 import game.tictactoe.TictactoeStartController;
 import game.tictactoe.tictactoePvpStart;
@@ -11,13 +13,14 @@ import javafx.stage.Stage;
 import main.MainController;
 import menu.MenuController;
 
+//MiniGame 내 페이지 이동 관련 클래스
 public class PageImpl implements Page{
 	Parent root;
-	
+
+	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-
 	@Override
 	public void mainPage() {
 		try {
@@ -28,7 +31,7 @@ public class PageImpl implements Page{
 
 			MainController ctl = loader.getController();
 			ctl.setRoot(root);
-			
+
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 			stage.setScene(scene);
@@ -37,9 +40,9 @@ public class PageImpl implements Page{
 			e.printStackTrace();
 		}
 	}
-
 	@Override
 	public void menuPage() {
+
 		try {
 			FXMLLoader loader =
 					new FXMLLoader(getClass().getResource("../../menu/menuView.fxml"));
@@ -48,32 +51,7 @@ public class PageImpl implements Page{
 
 			MenuController ctl = loader.getController();
 			ctl.setRoot(root);
-			
-			Stage stage = (Stage)this.root.getScene().getWindow();
 
-			stage.setScene(scene);
-			stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Override
-	public void rankingPage() {
-		
-	}
-
-	@Override
-	public void ticTacToePage() {
-		try {
-			FXMLLoader loader =
-					new FXMLLoader(getClass().getResource("../../game/tictactoe/ticTacToeView.fxml"));
-			Parent root = loader.load();
-			Scene scene = new Scene(root);
-
-			TicTacToeController ctl = loader.getController();
-			ctl.setRoot(root);
-			
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 			stage.setScene(scene);
@@ -93,7 +71,7 @@ public class PageImpl implements Page{
 
 			OneToFiftyController ctl = loader.getController();
 			ctl.setRoot(root);
-			
+
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 			stage.setScene(scene);
@@ -102,7 +80,65 @@ public class PageImpl implements Page{
 			e.printStackTrace();
 		}
 	}
-	
+	@Override
+	public void rankingInsert(String clearTime) {
+		try {
+			FXMLLoader loader =
+					new FXMLLoader(getClass().getResource("../../game/onetofifty/myClearTimeView.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			MyClearTimeController ctl = loader.getController();
+			ctl.setRoot(root, clearTime);
+
+			Stage stage = (Stage)this.root.getScene().getWindow();
+
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public void rankingPage1to50() {
+		try {
+			FXMLLoader loader =
+					new FXMLLoader(getClass().getResource("../../game/onetofifty/rankingView.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			RankingController ctl = loader.getController();
+			ctl.setRoot(root);
+
+			Stage stage = (Stage)this.root.getScene().getWindow();
+
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void ticTacToePage() {
+		try {
+			FXMLLoader loader =
+					new FXMLLoader(getClass().getResource("../../game/tictactoe/ticTacToeView.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			TicTacToeController ctl = loader.getController();
+			ctl.setRoot(root);
+
+			Stage stage = (Stage)this.root.getScene().getWindow();
+
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
 	public void tictactoePvpPage() {
 		try {
 			FXMLLoader loader =
@@ -112,7 +148,7 @@ public class PageImpl implements Page{
 
 			tictactoePvpStart ctl = loader.getController();
 			ctl.setRoot(root);
-			
+
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 			stage.setScene(scene);
@@ -121,6 +157,7 @@ public class PageImpl implements Page{
 			e.printStackTrace();
 		}
 	}
+	@Override
 	public void tictactoePvcPage() {
 		try {
 			FXMLLoader loader =
@@ -130,7 +167,7 @@ public class PageImpl implements Page{
 
 			TictactoeStartController ctl = loader.getController();
 			ctl.setRoot(root);
-			
+
 			Stage stage = (Stage)this.root.getScene().getWindow();
 
 			stage.setScene(scene);

@@ -16,27 +16,25 @@ public class tictactoePvpStart implements Initializable{
 	Parent root;
 	Page pg;
 	TictactoeGameRule gRule;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	
-	public void playerCommit() {
-		System.out.println("닉네임 입력 완료.");
-		gRule.setRoot(root);
-		gRule.getPlayerName();
-	}
-	
+
+	/*
+	 * public void playerCommit() { System.out.println("닉네임 입력 완료.");
+	 * gRule.setRoot(root); }
+	 */
 	public void startProc() {
 		gRule.setRoot(root);
 		gRule.gameStart();
 	}
-	
-	
+
+
 	public void abstentionProc() {
-		
+
 	}
-	
+
 	public void goMainProc() {
 		pg.setRoot(root);
 		pg.menuPage();
@@ -48,9 +46,9 @@ public class tictactoePvpStart implements Initializable{
 		gRule.setRoot(root);
 		gRule.btnProc(btn);
 	}
-	
-	
-	
+
+
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		pg = new PageImpl();
