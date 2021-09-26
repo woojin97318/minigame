@@ -1,0 +1,29 @@
+#gameAnchorPane {
+    -fx-background-color: linear-gradient(#CAE3FF, #E3BFFF);
+}
+.root {
+    -fx-background-color: linear-gradient(#CAE3FF, #E3BFFF);
+}
+.label{
+	-fx-font-family: "Arial Black";
+	-fx-text-fill: #891d8c;
+	-fx-font-weight: bold;
+}
+.button {
+    -fx-background-color: transparent;
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,102,255,0.5) , 15, 0.0 , 0 , 10 );
+}
+.button:hover {
+	-fx-effect: dropshadow( three-pass-box , rgba(0,102,255,0.5) , 3, 0.0 , 0 , 5 );
+}
+.button:active {
+	
+	
+	
+}
+#paneWhite {
+	-fx-background-color: white;
+	-fx-background-radius: 11;
+}

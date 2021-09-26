@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class MainClass extends Application {
@@ -20,6 +21,8 @@ public class MainClass extends Application {
 		MainController ctl = loader.getController();
 		ctl.setRoot(root);
 
+//		primaryStage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
+		primaryStage.setTitle("미니게임");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

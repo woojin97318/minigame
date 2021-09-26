@@ -5,13 +5,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.onetofifty.RankingController">
+<AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.onetofifty.RankingController">
    <children>
-      <Button layoutX="107.0" layoutY="306.0" mnemonicParsing="false" onAction="#reStartBtn" prefHeight="22.0" prefWidth="68.0" text="다시 시작" />
+      <Pane fx:id="paneWhite" layoutX="268.0" layoutY="17.0" opacity="0.6" prefHeight="417.0" prefWidth="520.0" />
+      <Button fx:id="gamestartBtn" layoutX="69.0" layoutY="251.0" mnemonicParsing="false" onAction="#reStartBtn" prefHeight="43.0" prefWidth="144.0" text="다시 하기">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
       <BorderPane layoutX="278.0" layoutY="26.0" prefHeight="398.0" prefWidth="500.0">
          <center>
             <TableView fx:id="rankTableView" BorderPane.alignment="CENTER">
@@ -23,7 +30,7 @@
             </TableView>
          </center>
          <top>
-            <Label contentDisplay="CENTER" text="Ranking" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <Label contentDisplay="CENTER" text="Ranking" textAlignment="CENTER" textFill="#4d4d4d" BorderPane.alignment="CENTER">
                <font>
                   <Font size="38.0" />
                </font>
@@ -33,6 +40,21 @@
             </Label>
          </top>
       </BorderPane>
-      <Button layoutX="107.0" layoutY="337.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="22.0" prefWidth="68.0" text="홈" />
+      <Button fx:id="homeBtn" layoutX="94.0" layoutY="321.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="75.0" prefWidth="63.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../source/images/home2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fx:id="img1to50" fitHeight="87.0" fitWidth="219.0" layoutX="32.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../source/images/title_1to50.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
