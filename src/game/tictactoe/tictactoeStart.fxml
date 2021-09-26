@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tictactoe.TictactoeStartController">
+<AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tictactoe.TictactoeStartController">
    <children>
       <Button layoutX="27.0" layoutY="30.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="146.0" text="난이도" />
       <Button layoutX="27.0" layoutY="135.0" mnemonicParsing="false" onAction="#pauseStartProc" prefHeight="75.0" prefWidth="146.0" text="일시정지/게임시작" />

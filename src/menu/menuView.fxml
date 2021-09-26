@@ -2,17 +2,44 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
+<AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../css/MenuTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
    <children>
-      <Button layoutX="66.0" layoutY="153.0" mnemonicParsing="false" onAction="#ticTacToe" prefHeight="100.0" prefWidth="100.0" text="Tic Tac Toe" />
-      <Button layoutX="199.0" layoutY="153.0" mnemonicParsing="false" onAction="#oneToFity" prefHeight="100.0" prefWidth="100.0" text="1 to 50" />
-      <Label layoutX="293.0" layoutY="66.0" text="Game List">
+      <Pane fx:id="paneWhite" layoutX="30.0" layoutY="123.0" opacity="0.7" prefHeight="299.0" prefWidth="740.0" />
+   	  <Label layoutX="274.0" layoutY="28.0" text="Game List" textFill="WHITE">
          <font>
-            <Font size="48.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
+      <Button fx:id="ticTacToeStartBtn" layoutX="78.0" layoutY="140.0" mnemonicParsing="false" onAction="#ticTacToe" prefHeight="109.0" prefWidth="237.0">
+         <graphic>
+            <ImageView fitHeight="98.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../source/images/title_TTT.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="oneToFiftyStartBtn" layoutX="441.0" layoutY="140.0" mnemonicParsing="false" onAction="#oneToFity" prefHeight="109.0" prefWidth="287.0">
+         <graphic>
+            <ImageView fitHeight="96.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../source/images/title_1to50.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      
+      <Button fx:id="tetrisStartBtn" layoutX="251.0" layoutY="293.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="308.0">
+         <graphic>
+            <ImageView fitHeight="96.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../source/images/title_Tetris.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>
