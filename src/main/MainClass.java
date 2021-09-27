@@ -20,8 +20,10 @@ public class MainClass extends Application {
 
 		MainController ctl = loader.getController();
 		ctl.setRoot(root);
+		primaryStage.setOnCloseRequest(event -> {System.exit(0);}); //창 닫으면 모두 종료
+		primaryStage.setResizable(false); //창크기 고정
 
-//		primaryStage.getIcons().add(new Image("file:resources/icon/icon_youtube_32x32.png"));
+		primaryStage.getIcons().add(new Image("file:source/images/game_icon.png")); //게임 아이콘 이미지
 		primaryStage.setTitle("미니게임");
 		primaryStage.setScene(scene);
 		primaryStage.show();
