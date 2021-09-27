@@ -17,7 +17,6 @@ public class MyClearTimeController implements Initializable {
 	Label timerLb;
 	int success;
 	Page page;
-	Exit exit;
 		
 	public void setRoot(Parent root, String clearTime) {
 		this.root = root;
@@ -30,7 +29,6 @@ public class MyClearTimeController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		page = new PageImpl();
-		exit = new Exit();
 	}
 	
 	public void nickOkBtn() {

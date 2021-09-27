@@ -2,8 +2,10 @@ package common.page;
 
 import game.onetofifty.MyClearTimeController;
 import game.onetofifty.OneToFiftyController;
-import game.onetofifty.RankingController;
+import game.onetofifty.oneToFiftyRankingController;
+import game.tetris.MyScoreController;
 import game.tetris.TetrisController;
+import game.tetris.TetrisRankingController;
 import game.tictactoe.TicTacToeController;
 import game.tictactoe.TictactoeStartController;
 import game.tictactoe.tictactoePvpStart;
@@ -110,7 +112,7 @@ public class PageImpl implements Page {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 
-			RankingController ctl = loader.getController();
+			oneToFiftyRankingController ctl = loader.getController();
 			ctl.setRoot(root);
 
 			Stage stage = (Stage) this.root.getScene().getWindow();
@@ -184,13 +186,53 @@ public class PageImpl implements Page {
 	}
 
 	@Override
-	public void TetrisPage() {
+	public void tetrisPage() {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("../../game/tetris/tetrisView.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 
 			TetrisController ctl = loader.getController();
+			ctl.setRoot(root);
+
+			Stage stage = (Stage) this.root.getScene().getWindow();
+
+			stage.setTitle("테트리스");
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void tetrisRankingInsert(int score) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../../game/tetris/myScoreView.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			MyScoreController ctl = loader.getController();
+			ctl.setRoot(root, score);
+
+			Stage stage = (Stage) this.root.getScene().getWindow();
+
+			stage.setTitle("테트리스");
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void rankingPageTetris() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../../game/tetris/rankingView.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			TetrisRankingController ctl = loader.getController();
 			ctl.setRoot(root);
 
 			Stage stage = (Stage) this.root.getScene().getWindow();

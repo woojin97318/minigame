@@ -91,7 +91,7 @@ public class GameStartImpl implements GameStart {
 			step++;
 			nextNumLb.setText(Integer.toString(step));
 
-			if(step == 3) {	// 게임종료 및 타이머 종료
+			if(step == 51) {	// 게임종료 및 타이머 종료
 				nextNumLb.setText("게임 클리어");	//다음 숫자 텍스트 "게임 클리어"로 setText
 				thread.interrupt();				//타이머 작동 스탑
 				clearTime = timerLb.getText(); 	//클리어 시간 저장
