@@ -7,7 +7,6 @@ import game.tetris.MyScoreController;
 import game.tetris.TetrisController;
 import game.tetris.TetrisRankingController;
 import game.tictactoe.TicTacToeController;
-import game.tictactoe.TictactoeStartController;
 import game.tictactoe.tictactoePvpStart;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -165,25 +164,6 @@ public class PageImpl implements Page {
 		}
 	}
 
-	@Override
-	public void tictactoePvcPage() {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("../../game/tictactoe/tictactoeStart.fxml"));
-			Parent root = loader.load();
-			Scene scene = new Scene(root);
-
-			TictactoeStartController ctl = loader.getController();
-			ctl.setRoot(root);
-
-			Stage stage = (Stage) this.root.getScene().getWindow();
-
-			stage.setTitle("틱택토");
-			stage.setScene(scene);
-			stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	@Override
 	public void tetrisPage() {

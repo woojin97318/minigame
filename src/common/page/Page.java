@@ -14,7 +14,6 @@ public interface Page {
 	// ticTacToe 관련 페이지 이동 메소드
 	public void ticTacToePage();					// TicTacToe 시작 페이지
 	public void tictactoePvpPage();					// TicTacToe 2인용 페이지
-	public void tictactoePvcPage();					// TicTacToe 1인용 페이지(구현x)
 	// Tetris 관련 페이지 이동 메소드
 	public void tetrisPage();						// 테트리스 시작 페이지
 	public void tetrisRankingInsert(int score);	// 테트리스 랭킹 등록 페이지
