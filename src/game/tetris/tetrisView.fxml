@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tetris.TetrisController">
+   <children>
+      <Label layoutX="126.0" layoutY="141.0" text="테트리스">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitBtn" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="뒤로가기" />
+      <Button fx:id="gameStartBtn" layoutX="166.0" layoutY="266.0" mnemonicParsing="false" onAction="#gameStart" text="게임시작" />
+      <Pane fx:id="pane" layoutX="418.0" layoutY="25.0" prefHeight="400.0" prefWidth="200.0" />
+      <Label fx:id="scoreLb" layoutX="651.0" layoutY="83.0" text="Score : 0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="linesLb" layoutX="652.0" layoutY="129.0" text="Lines : 0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

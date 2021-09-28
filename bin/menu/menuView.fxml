@@ -33,7 +33,7 @@
             </ImageView>
          </graphic></Button>
       
-      <Button fx:id="tetrisStartBtn" layoutX="251.0" layoutY="293.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="308.0">
+      <Button fx:id="tetrisStartBtn" layoutX="251.0" layoutY="293.0" mnemonicParsing="false" onAction="#tetris" prefHeight="109.0" prefWidth="308.0">
          <graphic>
             <ImageView fitHeight="96.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true">
                <image>

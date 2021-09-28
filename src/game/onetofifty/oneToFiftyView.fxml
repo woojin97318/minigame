@@ -125,11 +125,11 @@
                </font></Button>
          </children>
       </Pane>
-      <Button fx:id="gameStartBtn" layoutX="112.0" layoutY="339.0" mnemonicParsing="false" onAction="#gameStart" prefHeight="62.0" prefWidth="202.0" text="게임 시작">
+      <Button fx:id="gameStartBtn" layoutX="113.0" layoutY="325.0" mnemonicParsing="false" onAction="#gameStart" prefHeight="62.0" prefWidth="202.0" text="게임 시작">
          <font>
             <Font size="17.0" />
          </font></Button>
-      <ImageView fx:id="img1to50" fitHeight="150.0" fitWidth="267.0" layoutX="79.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img1to50" fitHeight="150.0" fitWidth="267.0" layoutX="80.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../source/images/title_1to50.png" />
          </image>
@@ -146,7 +146,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Pane fx:id="paneWhite" layoutX="72.0" layoutY="244.0" opacity="0.87" prefHeight="71.0" prefWidth="281.0">
+      <Pane fx:id="paneWhite" layoutX="74.0" layoutY="223.0" opacity="0.87" prefHeight="71.0" prefWidth="281.0">
          <children>
             <Label fx:id="timerLb" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="9.0" prefHeight="43.0" prefWidth="219.0" text="00:00:00" textAlignment="CENTER">
                <font>

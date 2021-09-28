@@ -22,7 +22,6 @@ public class TicTacToeController implements Initializable{
 
 	public void pvcProc() {
 		pg.setRoot(root);
-		pg.tictactoePvcPage();
 	}
 
 	public void goMainProc() {

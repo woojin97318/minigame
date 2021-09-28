@@ -31,5 +31,11 @@ public class MenuController implements Initializable{
 		page.setRoot(root);
 		page.oneToFiftyPage();
 	}
+	
+	public void tetris() {
+		// 테트리스 게임시작
+		page.setRoot(root);
+		page.tetrisPage();
+	}
 
 }
