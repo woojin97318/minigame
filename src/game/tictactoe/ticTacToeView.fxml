@@ -10,22 +10,17 @@
 <AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tictactoe.TicTacToeController">
    <children>
       <Pane fx:id="paneWhite" layoutX="226.0" layoutY="8.0" opacity="0.6" prefHeight="435.0" prefWidth="350.0" />
-      <Button fx:id="gamestartBtn" layoutX="302.0" layoutY="200.0" mnemonicParsing="false" onAction="#pvpProc" prefHeight="50.0" prefWidth="198.0" text="Player vs Player ">
+      <Button fx:id="gamestartBtn" layoutX="302.0" layoutY="233.0" mnemonicParsing="false" onAction="#pvpProc" prefHeight="50.0" prefWidth="198.0" text="Player vs Player ">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="gamestartBtn" disable="true" layoutX="302.0" layoutY="265.0" mnemonicParsing="false" onAction="#pvcProc" prefHeight="50.0" prefWidth="198.0" text="Player vs Computer">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <ImageView fx:id="img1to50" fitHeight="150.0" fitWidth="267.0" layoutX="267.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img1to50" fitHeight="150.0" fitWidth="267.0" layoutX="267.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../source/images/title_TTT.png" />
          </image>
       </ImageView>
-      <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="353.0" layoutY="336.0" mnemonicParsing="false" onAction="#goMainProc" prefHeight="75.0" prefWidth="63.0" textAlignment="CENTER">
+      <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="353.0" layoutY="317.0" mnemonicParsing="false" onAction="#goMainProc" prefHeight="75.0" prefWidth="63.0" textAlignment="CENTER">
          <font>
             <Font size="17.0" />
          </font>

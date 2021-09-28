@@ -4,7 +4,7 @@
 #gameAnchorPane {
     -fx-background-color: linear-gradient(#CAE3FF, #E3BFFF);
 }
-#paneWhite {
+#paneWhite, #pane {
 	-fx-background-color: white;
 	-fx-background-radius: 11;
 }
@@ -36,7 +36,7 @@
     -fx-border-insets: 1 1 1 1, 0;
 	-fx-effect: dropshadow(three-pass-box, rgba(0,102,255,0.5), 15, 0.0 , 0 , 10);
 }
-#gamestartBtn:hover {
+#gamestartBtn:hover, #gameStartBtn:hover {
 	-fx-background-color: #DED2E3;
 }
 #ticTacToeStartBtn, #oneToFiftyStartBtn, #exitBtn{
