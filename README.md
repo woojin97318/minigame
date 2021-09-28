@@ -1,4 +1,4 @@
-# minigame
+# :video_game: Mini Game :video_game:
 
 ### 다양한 게임을 즐길 수 있는 미니게임(MiniGame) 프로젝트
 
