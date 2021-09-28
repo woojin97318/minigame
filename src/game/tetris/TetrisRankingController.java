@@ -29,11 +29,11 @@ public class TetrisRankingController implements Initializable{
 	private TableColumn<RankingDTO, String> nickColumn;
 	@FXML
 	private TableColumn<RankingDTO, String> scoreColumn;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		page = new PageImpl();
@@ -42,26 +42,26 @@ public class TetrisRankingController implements Initializable{
 		scoreColumn.setCellValueFactory(new PropertyValueFactory<>("score"));
 		rankTableView.setItems(getRank());
 	}
-	
+
 	public ObservableList<RankingDTO> getRank(){
 		ObservableList<RankingDTO> rank = FXCollections.observableArrayList();
-		
+
 		try {
 			db = new DBClass();
 			String sql = "select * from tetrisrank order by score desc";
 			PreparedStatement ps = db.conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			int i = 1;
-	        while(rs.next()) {
-	        	rank.add(new RankingDTO(Integer.toString(i), rs.getString("nickname"), rs.getString("score")));
-	        	i++;
-	        }
+			while(rs.next()) {
+				rank.add(new RankingDTO(Integer.toString(i), rs.getString("nickname"), rs.getString("score")));
+				i++;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return rank;
 	}
-	
+
 	public void reStartBtn(){
 		page.setRoot(root);
 		page.tetrisPage();
@@ -70,4 +70,5 @@ public class TetrisRankingController implements Initializable{
 		page.setRoot(root);
 		page.menuPage();
 	}
+
 }

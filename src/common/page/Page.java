@@ -16,6 +16,6 @@ public interface Page {
 	public void tictactoePvpPage();					// TicTacToe 2인용 페이지
 	// Tetris 관련 페이지 이동 메소드
 	public void tetrisPage();						// 테트리스 시작 페이지
-	public void tetrisRankingInsert(int score);	// 테트리스 랭킹 등록 페이지
+	public void tetrisRankingInsert(int score);		// 테트리스 랭킹 등록 페이지
 	public void rankingPageTetris();				// 테트리스 랭킹 리스트 페이지
 }

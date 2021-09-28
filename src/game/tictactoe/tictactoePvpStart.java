@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 
 public class tictactoePvpStart implements Initializable{
-
 	Parent root;
 	Page pg;
 	TictactoeGameRule gRule;
@@ -39,6 +38,7 @@ public class tictactoePvpStart implements Initializable{
 		pg.setRoot(root);
 		pg.menuPage();
 	}
+	
 	public void btnClicked(ActionEvent e) {
 		System.out.println(e.getSource());
 		System.out.println((Button)e.getSource());
@@ -46,8 +46,6 @@ public class tictactoePvpStart implements Initializable{
 		gRule.setRoot(root);
 		gRule.btnProc(btn);
 	}
-
-
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

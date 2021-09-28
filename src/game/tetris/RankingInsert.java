@@ -13,14 +13,14 @@ public class RankingInsert {
 	DBClass db;
 	TextField nickTf;
 	Label scoreLb;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 		db = new DBClass();
 		nickTf = (TextField)root.lookup("#nickTf");
 		scoreLb = (Label)root.lookup("#scoreLb");
 	}
-	
+
 	public int rankInsert() {
 		String sql = "insert into tetrisrank values(?, ?)";
 		int result = 0;
@@ -35,4 +35,5 @@ public class RankingInsert {
 		}
 		return result;
 	}
+
 }

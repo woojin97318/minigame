@@ -11,16 +11,16 @@ import javafx.scene.Parent;
 public class MenuController implements Initializable{
 	Parent root;
 	Page page;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		page = new PageImpl();
 	}
-	
+
 	public void ticTacToe() {
 		// 틱택토 게임시작
 		page.setRoot(root);
@@ -31,7 +31,7 @@ public class MenuController implements Initializable{
 		page.setRoot(root);
 		page.oneToFiftyPage();
 	}
-	
+
 	public void tetris() {
 		// 테트리스 게임시작
 		page.setRoot(root);

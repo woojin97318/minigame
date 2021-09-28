@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 public class TicTacToeController implements Initializable{
 	Parent root;
 	Page pg;
+	
 	public void setRoot(Parent root) {
 		this.root = root;
 	}

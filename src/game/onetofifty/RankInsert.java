@@ -4,8 +4,6 @@ import java.sql.PreparedStatement;
 
 import common.AlertClass;
 import common.DBClass;
-import common.page.Page;
-import common.page.PageImpl;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -15,14 +13,14 @@ public class RankInsert {
 	DBClass db;
 	TextField nickTf;
 	Label timerLb;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 		db = new DBClass();
 		nickTf = (TextField)root.lookup("#nickTf");
 		timerLb = (Label)root.lookup("#timerLb");
 	}
-	
+
 	public int rankInsert() {
 		String sql = "insert into onetofiftyrank values(?, ?)";
 		int result = 0;
@@ -37,4 +35,5 @@ public class RankInsert {
 		}
 		return result;
 	}
+
 }

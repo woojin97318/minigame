@@ -12,7 +12,7 @@ public class TetrisController implements Initializable{
 	Parent root;
 	Page page;
 	Tetris tetris;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
@@ -22,12 +22,12 @@ public class TetrisController implements Initializable{
 		page = new PageImpl();
 		tetris = new Tetris();
 	}
-	
+
 	public void gameStart() {
 		tetris.setRoot(root);
 		tetris.tetrisStart();
 	}
-	
+
 	public void exit() {
 		page.setRoot(root);
 		page.menuPage();

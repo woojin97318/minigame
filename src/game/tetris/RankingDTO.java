@@ -4,7 +4,7 @@ public class RankingDTO {
 	private String rank;
 	private String nickname;
 	private String score;
-	
+
 	public RankingDTO(String rank, String nickname, String score) {
 		this.rank = rank;
 		this.nickname = nickname;
@@ -34,7 +34,5 @@ public class RankingDTO {
 	public void setScore(String score) {
 		this.score = score;
 	}
-	
-	
-	
+
 }

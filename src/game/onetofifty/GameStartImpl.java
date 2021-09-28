@@ -41,7 +41,7 @@ public class GameStartImpl implements GameStart {
 
 		for (int i = 0; i < 25; i++) {	// btn1 ~ btn25 버튼
 			btn[i] = (Button)root.lookup("#btn" + Integer.toString(i+1));	//초기화
-			btn[i].setText(Integer.toString(num[i]));	//num[0~24] 숫자를 버튼에 setText()
+			btn[i].setText(Integer.toString(num[i]));						//num[0~24] 숫자를 버튼에 setText()
 		}
 
 		if (step > 0 && step < 51) {
@@ -65,17 +65,17 @@ public class GameStartImpl implements GameStart {
 		Random r = new Random();
 		int x = 0, y = 0, t = 0;
 		for (int i = 0; i < 100; i++) {
-			x = r.nextInt(25); // 두개의 버튼을 선택해서
+			x = r.nextInt(25);	// 두개의 버튼을 선택해서
 			y = r.nextInt(25);
 			t = num[x];         // 두 버튼의 값을
 			num[x] = num[y];    // 서로 변경한다.
 			num[y] = t;
 		}
 		for (int i = 0; i < 100; i++) {
-			x = r.nextInt(25)+25; // 두개의 버튼을 선택해서
+			x = r.nextInt(25)+25;	// 두개의 버튼을 선택해서
 			y = r.nextInt(25)+25;
-			t = num[x];         // 두 버튼의 값을
-			num[x] = num[y];    // 서로 변경한다.
+			t = num[x];				// 두 버튼의 값을
+			num[x] = num[y];		// 서로 변경한다.
 			num[y] = t;
 		}
 	}

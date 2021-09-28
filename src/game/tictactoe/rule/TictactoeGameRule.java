@@ -7,9 +7,7 @@ import javafx.scene.control.Label;
 
 public class TictactoeGameRule {
 	Parent root;
-
 	AlertClass alert = new AlertClass();
-	
 	Button[] gameBtn = new Button[10];
 	//Button playerChk;
 	Button gameStartBtn ;
@@ -21,7 +19,7 @@ public class TictactoeGameRule {
 	public void setRoot(Parent root) {	
 		this.root = root;	
 	}
-	
+
 	public void setPTurn(String s) {
 		this.pTurn = s;
 	}
@@ -49,7 +47,6 @@ public class TictactoeGameRule {
 	 * 
 	 * }
 	 */
-
 
 	//턴계산 메소드
 	public void changeTurn() {
@@ -90,6 +87,7 @@ public class TictactoeGameRule {
 		}
 
 	}
+
 	public void btnProc(Button btn) {
 		changeTurn();
 		btn.setText(whoTurn);
@@ -106,7 +104,7 @@ public class TictactoeGameRule {
 			lblStatus.setText("무승부입니다");
 			gameFinished();
 			//두플레이어 DB -> drawCnt++ -> 다시하기
-			
+
 		}
 	}
 
@@ -158,15 +156,14 @@ public class TictactoeGameRule {
 		}		
 		return false;
 	}
-	
-	
+
 	/*
 	 *  DB 접근 -> tictactoeRank -> select * table Win카운트에 대해 내림차순
 	 *  -> 뷰로 보여 주는 메소드.
 	public void rankTable() {
-		
+
 	}
-*/
+	 */
 
 	//무승부 미완성
 	public boolean isFull() {
@@ -176,4 +173,5 @@ public class TictactoeGameRule {
 		}
 		return false;
 	}
+
 }

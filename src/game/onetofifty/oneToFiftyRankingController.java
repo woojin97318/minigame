@@ -29,7 +29,7 @@ public class oneToFiftyRankingController implements Initializable {
 	private TableColumn<RankingDTO, String> nickColumn;
 	@FXML
 	private TableColumn<RankingDTO, String> clearTimeColumn;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
@@ -42,26 +42,26 @@ public class oneToFiftyRankingController implements Initializable {
 		clearTimeColumn.setCellValueFactory(new PropertyValueFactory<>("time"));
 		rankTableView.setItems(getRank());
 	}
-	
+
 	public ObservableList<RankingDTO> getRank(){
 		ObservableList<RankingDTO> rank = FXCollections.observableArrayList();
-		
+
 		try {
 			db = new DBClass();
 			String sql = "select * from onetofiftyrank order by cleartime asc";
 			PreparedStatement ps = db.conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			int i = 1;
-	        while(rs.next()) {
-	        	rank.add(new RankingDTO(Integer.toString(i), rs.getString("nickname"), rs.getString("cleartime")));
-	        	i++;
-	        }
+			while(rs.next()) {
+				rank.add(new RankingDTO(Integer.toString(i), rs.getString("nickname"), rs.getString("cleartime")));
+				i++;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return rank;
 	}
-	
+
 	public void reStartBtn(){
 		page.setRoot(root);
 		page.oneToFiftyPage();
@@ -70,4 +70,5 @@ public class oneToFiftyRankingController implements Initializable {
 		page.setRoot(root);
 		page.menuPage();
 	}
+
 }

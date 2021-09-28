@@ -13,17 +13,17 @@ public class OneToFiftyController implements Initializable{
 	Parent root;
 	Page page;
 	GameStart gs;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		page = new PageImpl();
 		gs = new GameStartImpl();
 	}
-	
+
 	public void gameStart() {
 		gs.setRoot(root);
 		gs.gameStart();

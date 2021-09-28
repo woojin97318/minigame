@@ -34,10 +34,10 @@ public class Tetris {
 	Label scoreLb;
 	Label linesLb;
 	Button gameStartBtn;
-	Page page = new PageImpl();
 	public static Timer timer;
 	public static TimerTask task;
-	
+	Page page = new PageImpl();
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
@@ -45,15 +45,15 @@ public class Tetris {
 	public void tetrisStart() {
 		pane = (Pane)root.lookup("#pane");
 		gameStartBtn = (Button)root.lookup("#gameStartBtn");
-		
+
 		pane.requestFocus();		// 테트리스 판에 포커스를 맞춤
-		
+
 		if(gameStartBtn.getText().equals("다시 시작")) {
 			score = 0;
 			linesNo = 0;
 			pane.getChildren().clear();
 		}
-		
+
 		for (int[] a : MESH) {
 			Arrays.fill(a, 0);
 		}
@@ -97,14 +97,14 @@ public class Tetris {
 		};
 		// 0시간이 지난 이후에 300 간격으로 task 실행
 		timer.schedule(task, 0, 300);
-		
+
 		if(gameStartBtn.getText().equals("다시 시작")) {
 			task.cancel();
 			timer.cancel();
 		}
 		gameStartBtn.setText("다시 시작");
 	}
-	
+
 	private void moveOnKeyPress(Form form) {
 		pane.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
@@ -415,7 +415,7 @@ public class Tetris {
 			break;
 		}
 	}
-	
+
 	private void RemoveRows(Pane pane) {
 		ArrayList<Node> rects = new ArrayList<Node>();
 		ArrayList<Integer> lines = new ArrayList<Integer>();
@@ -524,7 +524,7 @@ public class Tetris {
 			int moveb = MESH[(int) form.b.getX() / SIZE][((int) form.b.getY() / SIZE) + 1];
 			int movec = MESH[(int) form.c.getX() / SIZE][((int) form.c.getY() / SIZE) + 1];
 			int moved = MESH[(int) form.d.getX() / SIZE][((int) form.d.getY() / SIZE) + 1];
-			
+
 			if (movea == 0 && movea == moveb && moveb == movec && movec == moved) {
 				form.a.setY(form.a.getY() + MOVE);
 				form.b.setY(form.b.getY() + MOVE);
@@ -553,7 +553,7 @@ public class Tetris {
 	private boolean cB(Rectangle rect, int x, int y) {
 		boolean xb = false;
 		boolean yb = false;
-		
+
 		if (x >= 0)
 			xb = rect.getX() + x * MOVE <= XMAX - SIZE;
 		if (x < 0)
@@ -562,8 +562,8 @@ public class Tetris {
 			yb = rect.getY() - y * MOVE > 0;
 		if (y < 0)
 			yb = rect.getY() + y * MOVE < YMAX;
-		
+
 		return xb && yb && MESH[((int) rect.getX() / SIZE) + x][((int) rect.getY() / SIZE) - y] == 0;
 	}
-	
+
 }
