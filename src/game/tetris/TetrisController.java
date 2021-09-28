@@ -31,6 +31,8 @@ public class TetrisController implements Initializable{
 	public void exit() {
 		page.setRoot(root);
 		page.menuPage();
+		Tetris.task.cancel();
+		Tetris.timer.cancel();
 	}
 
 }

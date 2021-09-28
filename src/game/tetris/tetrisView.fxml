@@ -14,7 +14,7 @@
          </font>
       </Label>
       <Button fx:id="exitBtn" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="뒤로가기" />
-      <Button fx:id="gameStartBtn" layoutX="166.0" layoutY="266.0" mnemonicParsing="false" onAction="#gameStart" text="게임시작" />
+      <Button fx:id="gameStartBtn" layoutX="166.0" layoutY="266.0" mnemonicParsing="false" onAction="#gameStart" text="게임 시작" />
       <Pane fx:id="pane" layoutX="418.0" layoutY="25.0" prefHeight="400.0" prefWidth="200.0" />
       <Label fx:id="scoreLb" layoutX="651.0" layoutY="83.0" text="Score : 0">
          <font>

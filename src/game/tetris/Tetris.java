@@ -5,14 +5,13 @@ import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.sun.javafx.tk.Toolkit.Task;
-
 import common.page.Page;
 import common.page.PageImpl;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
@@ -34,16 +33,26 @@ public class Tetris {
 	Pane pane;
 	Label scoreLb;
 	Label linesLb;
+	Button gameStartBtn;
 	Page page = new PageImpl();
+	public static Timer timer;
+	public static TimerTask task;
 	
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
 
 	public void tetrisStart() {
-		// 테트리스 판에 포커스를 맞춤
 		pane = (Pane)root.lookup("#pane");
-		pane.requestFocus();
+		gameStartBtn = (Button)root.lookup("#gameStartBtn");
+		
+		pane.requestFocus();		// 테트리스 판에 포커스를 맞춤
+		
+		if(gameStartBtn.getText().equals("다시 시작")) {
+			score = 0;
+			linesNo = 0;
+			pane.getChildren().clear();
+		}
 		
 		for (int[] a : MESH) {
 			Arrays.fill(a, 0);
@@ -56,8 +65,8 @@ public class Tetris {
 		object = a;
 		nextObj = block.makeRect();
 
-		Timer timer = new Timer();
-		TimerTask task = new TimerTask() {
+		timer = new Timer();
+		task = new TimerTask() {
 			public void run() {
 				Platform.runLater(new Runnable() {
 					public void run() {
@@ -88,6 +97,12 @@ public class Tetris {
 		};
 		// 0시간이 지난 이후에 300 간격으로 task 실행
 		timer.schedule(task, 0, 300);
+		
+		if(gameStartBtn.getText().equals("다시 시작")) {
+			task.cancel();
+			timer.cancel();
+		}
+		gameStartBtn.setText("다시 시작");
 	}
 	
 	private void moveOnKeyPress(Form form) {
