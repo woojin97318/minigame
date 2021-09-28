@@ -58,7 +58,6 @@ public class TictactoeGameRule {
 			pTurn = "X";
 			whoTurn = "O";
 			turnCnt++;
-
 		}
 	}
 
@@ -84,6 +83,7 @@ public class TictactoeGameRule {
 			System.out.println(i);
 			gameBtn[i].setText(" ");	
 			gameBtn[i].setDisable(false);
+			gameBtn[i].setStyle("-fx-background-color: white"); //버튼색 초기화
 		}
 
 	}
@@ -91,6 +91,7 @@ public class TictactoeGameRule {
 	public void btnProc(Button btn) {
 		changeTurn();
 		btn.setText(whoTurn);
+		oxBtnColor(btn); //버튼 색 구분
 		Label lblStatus = (Label)root.lookup("#lblStatus");
 		System.out.println("");
 		lblStatus.setText(pTurn+" 님의 차례입니다.");
@@ -173,5 +174,13 @@ public class TictactoeGameRule {
 		}
 		return false;
 	}
-
+	
+	//OX 버튼색 구분
+	public void oxBtnColor(Button btn) {
+		if(btn.getText().equals("X")) {
+			btn.setStyle("-fx-background-color: #FF7F62");
+		}else if(btn.getText().equals("O")) {
+			btn.setStyle("-fx-background-color: #0074FF");
+		}
+	}
 }
