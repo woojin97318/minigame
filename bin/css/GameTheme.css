@@ -62,3 +62,6 @@
 	-fx-border-radius : 10;
 	-fx-border-width: 3;
 }
+#gameBtn1, #gameBtn2, #gameBtn3, #gameBtn4, #gameBtn5, #gameBtn6, #gameBtn7, #gameBtn8, #gameBtn9 {
+    -fx-font-size:55;
+}
