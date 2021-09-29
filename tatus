@@ -1,0 +1,47 @@
+[33m47d07cb[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m css 수정
+[33me8994ef[m 버튼색 구분, 초기화
+[33m14bec6b[m 틱택토 버튼 텍스트 크기 변경
+[33mb73c859[m 전체 코드 수정(기능변화x)
+[33m8050f45[m[33m ([m[1;31morigin/juhee[m[33m)[m Merge branch 'master' into jeonwujin
+[33m9e47028[m 수정1
+[33m6a54d48[m 다시 시작 에러 수정(부분만 해결)
+[33m2d1bc8d[m 테트리스 fxml, css 수정
+[33m6e4a053[m 틱택토미사용파일 정리
+[33mc6686fe[m 테트리스 기능구현 완료
+[33m095e6fd[m Update PageImpl.java
+[33m9095567[m Update Page.java
+[33m1a0ae86[m 창크기 고정/아이콘 삽입/윈도우 종료
+[33m5be4fc9[m UI 디자인(테트리스 제외)
+[33m78bc9b3[m css 파일 추가
+[33m259e419[m title 수정
+[33mc18f71d[m title 추가
+[33m0795808[m tictactoe Merging 발생
+[33m44b18c9[m DB추가부분 삭제, 기능 완료
+[33m9b48730[m 1to50 머지
+[33m1b1bbff[m 전체 코드 첨삭
+[33mbe4c479[m onetofifty 기능구현 완료(수정 필요)
+[33mfff0077[m Rank DB 부분 구상중
+[33mf6d2478[m 틱택토 DB기능 추가중
+[33m5cd12ab[m 틱택토DB생성, 틱택토rule 소량 수정
+[33ma82565d[m 닉네임 기능 추가
+[33md6868c7[m[33m ([m[1;31morigin/sungtaek[m[33m)[m tictactoe 완성
+[33mfe058f5[m 기본 기능 완성
+[33med9092c[m 게임기능 구현 완료, 랭킹기능 구현 필요
+[33m194c62d[m 승부결정기능 완성 (무승부 미완성
+[33m0614544[m 타이머 구현중
+[33m0f29fb8[m 다음숫자 표시, 게임시작버튼 기능구현
+[33m668f931[m 기본적인 게임동작 구현 완료
+[33m426f524[m 하아아아...
+[33m819cf05[m 프로젝트 3일차 종료
+[33maa4ca23[m tictactoeC
+[33m2dd19f4[m page 이동 추가
+[33mb5cd759[m tictactoeB
+[33mfd00397[m tictactoeA
+[33mf66a983[m tictactoeStart기본설정
+[33me1530bd[m tictactoe 기본UI생성
+[33md1d2918[m park 브런치 생성
+[33m7e93b33[m 오타 수정
+[33mb31aad5[m 게임버튼 클릭시 게임페이지 진입 구현
+[33m0779027[m 화면전환 기능 구현
+[33md91bf33[m JavaFx 변경
+[33m8f90c79[m 프로젝트 재생성

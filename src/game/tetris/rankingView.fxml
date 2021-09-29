@@ -15,7 +15,7 @@
 <AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tetris.TetrisRankingController">
    <children>
       <Pane fx:id="paneWhite" layoutX="268.0" layoutY="17.0" opacity="0.6" prefHeight="417.0" prefWidth="520.0" />
-      <Button fx:id="gamestartBtn" layoutX="69.0" layoutY="223.0" mnemonicParsing="false" onAction="#reStartBtn" prefHeight="43.0" prefWidth="144.0" text="다시 하기">
+      <Button fx:id="gamestartBtn" layoutX="69.0" layoutY="235.0" mnemonicParsing="false" onAction="#reStartBtn" prefHeight="43.0" prefWidth="144.0" text="다시 하기">
          <font>
             <Font size="17.0" />
          </font></Button>
@@ -40,7 +40,7 @@
             </Label>
          </top>
       </BorderPane>
-      <Button fx:id="homeBtn" layoutX="94.0" layoutY="299.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="75.0" prefWidth="63.0">
+      <Button fx:id="homeBtn" layoutX="94.0" layoutY="310.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="75.0" prefWidth="63.0">
          <font>
             <Font size="17.0" />
          </font>
@@ -51,11 +51,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-<<<<<<< HEAD
-      <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="16.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
-=======
-      <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="14.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
->>>>>>> 4548bcd769a973d8d754ef017d6875530308d441
+      <ImageView fitHeight="75.0" fitWidth="231.0" layoutX="26.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../source/images/title_Tetris.png" />
          </image>
