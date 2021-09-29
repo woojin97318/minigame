@@ -51,7 +51,11 @@
                </image>
             </ImageView>
          </graphic></Button>
+<<<<<<< HEAD
       <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="16.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+=======
+      <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="14.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+>>>>>>> 4548bcd769a973d8d754ef017d6875530308d441
          <image>
             <Image url="@../../../source/images/title_Tetris.png" />
          </image>
