@@ -16,4 +16,4 @@
   * 전우진
 
 * 실행 영상
-  * https://www.youtube.com/watch?v=J6ECA5RZmI4
+  * https://www.youtube.com/watch?v=H-rmzGcL-4U
