@@ -51,5 +51,10 @@
                </image>
             </ImageView>
          </graphic></Button>
+      <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="14.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../source/images/title_Tetris.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
