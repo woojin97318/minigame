@@ -17,7 +17,7 @@
       </Label>
       <Pane fx:id="paneWhite" layoutX="36.0" layoutY="69.0" opacity="0.87" prefHeight="51.0" prefWidth="281.0">
          <children>
-            <Label fx:id="timerLb" layoutX="66.0" layoutY="2.0" text="00:00:00" textFill="#891d8c">
+            <Label fx:id="timerLb" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="2.0" text="00:00:00" textFill="#891d8c">
                <font>
                   <Font size="32.0" />
                </font>

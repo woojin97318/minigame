@@ -10,7 +10,7 @@
 <AnchorPane fx:id="gameAnchorPane" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../css/GameTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.tictactoe.TicTacToeController">
    <children>
       <Pane fx:id="paneWhite" layoutX="226.0" layoutY="8.0" opacity="0.6" prefHeight="435.0" prefWidth="350.0" />
-      <Button fx:id="gamestartBtn" layoutX="302.0" layoutY="233.0" mnemonicParsing="false" onAction="#pvpProc" prefHeight="50.0" prefWidth="198.0" text="Player vs Player ">
+      <Button fx:id="gamestartBtn" layoutX="302.0" layoutY="233.0" mnemonicParsing="false" onAction="#pvpProc" prefHeight="50.0" prefWidth="198.0" text="Game Start !">
          <font>
             <Font size="17.0" />
          </font>
