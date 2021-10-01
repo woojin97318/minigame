@@ -15,13 +15,4 @@
   * 박승재
   * 전우진
 
-실행 영상
-<br>
-<a href="https://www.youtube.com/watch?v=H-rmzGcL-4U">
-    <img src="http://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=YouTube&link=https://www.youtube.com/watch?v=H-rmzGcL-4U"
-         style="height:auto;margin-left:12px;margin-right:12px;"/>
-</a>
-<br>
-PPT
-<br>
-[Link](https://docs.google.com/presentation/d/1bom6g2m4zUFi2oJN9aR6UBkKoq2UoXB20i0KzvBDHLg/edit#slide=id.gf4eecea4da_0_36)
+실행 영상 [:point_right:Click:point_left:](https://www.youtube.com/watch?v=H-rmzGcL-4U)
