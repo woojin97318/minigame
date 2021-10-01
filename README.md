@@ -15,5 +15,7 @@
   * 박승재
   * 전우진
 
-* 실행 영상
+* 실행 영상 [Click](https://www.youtube.com/watch?v=H-rmzGcL-4U)
   * https://www.youtube.com/watch?v=H-rmzGcL-4U
+* PPT
+  * https://docs.google.com/presentation/d/1bom6g2m4zUFi2oJN9aR6UBkKoq2UoXB20i0KzvBDHLg/edit#slide=id.gf4eecea4da_0_36
