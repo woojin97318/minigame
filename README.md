@@ -6,13 +6,15 @@
   * 틱택토(Tic Tac Toe)
   * 1to50
   * 테트리스(Tetris)
+<br>
 
----
+### 프로젝트 소개 :point_right: [Notion](https://wujin97.notion.site/MiniGame-javafx-67267e65cb0547b18172e972b5299973) :point_left:
 
-* 개발자
-  * 오성택
-  * 이주희
-  * 박승재
-  * 전우진
+### 게임 플레이 영상<br>
+[![MiniGame 플레이 영상](https://img.youtube.com/vi/H-rmzGcL-4U/0.jpg)](https://youtu.be/H-rmzGcL-4U)
 
-실행 영상 [:point_right:Click:point_left:](https://www.youtube.com/watch?v=H-rmzGcL-4U)
+### 개발자
+* 오성택 [GitHub](https://github.com/sungtaekoh)
+* 이주희 [GitHub](https://github.com/2ggg)
+* 박승재 [GitHub](https://github.com/parkseungjae)
+* 전우진 [GitHub](https://github.com/woojin97318)
