@@ -8,8 +8,6 @@
 * 테트리스(Tetris)
 <br>
 
-### 프로젝트 소개 :point_right: [Notion](https://wujin97.notion.site/MiniGame-javafx-67267e65cb0547b18172e972b5299973) :point_left:
-
 ### 게임 플레이 영상<br>
 [![MiniGame 플레이 영상](https://img.youtube.com/vi/H-rmzGcL-4U/0.jpg)](https://youtu.be/H-rmzGcL-4U)
 
