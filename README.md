@@ -1,11 +1,11 @@
-# :video_game: Mini Game :video_game:
+# :video_game: Mini Game
 
-### 다양한 게임을 즐길 수 있는 미니게임(MiniGame) 프로젝트
+#### 다양한 게임을 즐길 수 있는 미니게임(MiniGame) 프로젝트
 
-* 게임 목록
-  * 틱택토(Tic Tac Toe)
-  * 1to50
-  * 테트리스(Tetris)
+#### 게임 목록
+* 틱택토(Tic Tac Toe)
+* 1to50
+* 테트리스(Tetris)
 <br>
 
 ### 프로젝트 소개 :point_right: [Notion](https://wujin97.notion.site/MiniGame-javafx-67267e65cb0547b18172e972b5299973) :point_left:
